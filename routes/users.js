@@ -7,6 +7,7 @@ const validator = require("validator");
 router.post("/", async (req, res) => {
   const errors = [];
 
+  
   if (!req.body) {
     errors.push("Request body is missing");
     return res.status(400).json({ errors });

@@ -13,6 +13,9 @@ app.use((err, req, res, next) => {
 });
 
 const usersRouter = require("./routes/users");
+const messagesRouter = require("./routes/messages");
+
+app.use("/messages", messagesRouter);
 app.use("/users", usersRouter);
 
 app.get("/", (req, res) => {
